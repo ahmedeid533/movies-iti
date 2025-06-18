@@ -11,6 +11,7 @@ const handler = NextAuth({
 		}),
 		// ...add more providers here
 	],
+	secret: process.env.NEXTAUTH_SECRET
 	// You can add custom pages, callbacks, and other options here if needed
 })
 
