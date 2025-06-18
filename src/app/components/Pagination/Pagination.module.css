@@ -1,0 +1,22 @@
+
+.pagination {
+  gap: 8px;
+}
+
+.pageDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.pageDot:hover {
+  background-color: #999;
+}
+
+.active {
+  background-color: #21d07a;
+}

@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.movieCard {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.movieCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.cardImg {
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  cursor: pointer;
+}
+
+.posterWrapper {
+  position: relative;
+}
+
+.ratingCircle {
+  position: absolute;
+  bottom: -20px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #081c22;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.cardTitle {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.cardTitle:hover {
+  color: #ffc107; /* Matches btn-warning color for consistency */
+}
+
+h1 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.rating {
+  /* Ensure PrimeReact Rating styles are not overridden */
+}

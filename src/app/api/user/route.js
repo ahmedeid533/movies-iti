@@ -8,14 +8,14 @@ async function connectDB() {
 	if (!client.topology?.isConnected()) {
 		await client.connect();
 	}
-	return client.db('movies-iti'); // Use your DB name
+	return client.db('movies'); // Use your DB name
 }
 
 export async function POST(request) {
 	try {
-		const { email, name, googleId } = await request.json();
+		const { email, name } = await request.json();
 
-		if (!email || !googleId) {
+		if (!email) {
 			return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
 		}
 
@@ -24,13 +24,12 @@ export async function POST(request) {
 
 		// Check if user already exists
 		let user = await users.findOne({ email });
-
+		console.log("user ==> ", user);
 		if (!user) {
 			// Insert new user
-			const result = await users.insertOne({ email, name, googleId, createdAt: new Date() });
+			const result = await users.insertOne({ email, name, createdAt: new Date() });
 			user = await users.findOne({ _id: result.insertedId });
 		}
-
 		return NextResponse.json({ user });
 	} catch (error) {
 		return NextResponse.json({ error: error.message }, { status: 500 });

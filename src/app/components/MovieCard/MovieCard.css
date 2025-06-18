@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+.movieCard {
+  border: none;
+  height: 420px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.movieCard:hover {
+  transform: scale(1.03);
+}
+
+
+
+.cardImg {
+  height: 330px; /* increased height */
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.posterWrapper {
+  position: relative;
+}
+
+.ratingCircle {
+  position: absolute;
+  bottom: -11px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #081c22;
+  border-radius: 50%;
+  padding: 3px;
+  z-index: 1;
+}
+.head {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Heart icon */
+.heartIcon {
+  position: absolute;
+  top: 390px;
+  right: 10px;
+  font-size: 22px;
+  color: #ccc;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.heartIcon:hover {
+  color: #FFC107;
+}
+
+.liked {
+  color: #FFC107;
+}
+
+h2 {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 30px; /* added top margin */
+}
+
+
+
+
+

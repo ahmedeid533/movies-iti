@@ -1,0 +1,41 @@
+.date {
+  font-size: 0.75rem;
+  color: rgb(147, 146, 146);
+}
+
+.button {
+  background-color: #ffe353;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #ffde36;
+}
+
+.icon {
+  font-size: 9rem;
+  color: #d1d1d1;
+}
+
+.rating {
+  color: #ffe353;
+  scale: 1.5;
+}
+
+.scrollable {
+  overflow-y: scroll;
+  height: 120px;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 1px 1px 8px 1px #ffe2538b !important;
+}
