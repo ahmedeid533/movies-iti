@@ -1,18 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 body{
   font-family: "Source Sans 3", sans-serif;
-
+  background-color: #ffffff;
+  color: #333333;
 }
 .movieCard {
   border-radius: 15px;
   overflow: hidden;
   background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  border: 1px solid #e0e0e0;
 }
 
 .movieCard:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .posterWrapper {
@@ -26,10 +29,9 @@ body{
     left: 10px;
     width: 50px;
     height: 50px;
-    background-color: #081c22;
+  background-color: #333333;
     border-radius: 50%;
     padding:3px;
-
 }
 
 .cardImg {
@@ -41,14 +43,12 @@ body{
   object-fit: cover;
 }
 
-
-
 .ratingCircle .CircularProgressbar-path {
-  stroke: #ffd700 !important;
+  stroke: #ffe353 !important;
 }
 
 .ratingCircle .CircularProgressbar-trail {
-  stroke: #444 !important;
+  stroke: #e0e0e0 !important;
 }
 
 .ratingCircle .CircularProgressbar-text {
@@ -59,12 +59,13 @@ body{
 .cardBody {
   padding: 10px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .cardTitle {
   font-size: 16px;
   font-weight: 600;
-  color: #333;
+  color: #333333;
   margin-bottom: 5px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -73,7 +74,7 @@ body{
 
 .cardText {
   font-size: 12px;
-  color: #666;
+  color: #666666;
   margin-bottom: 5px;
 }
 

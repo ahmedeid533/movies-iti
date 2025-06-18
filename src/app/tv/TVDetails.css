@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.tv-details-container {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.tv-details-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.tv-details-left {
+    flex: 1 1 300px;
+    max-width: 400px;
+}
+
+.tv-details-poster {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.tv-details-right {
+    flex: 1 1 500px;
+}
+
+.tv-details-title {
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 35.2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.tv-details-date {
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.tv-details-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tv-details-vote {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffe353;
+}
+
+.tv-details-overview {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444444;
+}
+
+.tv-details-genres {
+    margin-bottom: 20px;
+}
+
+.tv-details-genre-item {
+    display: inline-block;
+    background-color: #ffe353;
+    color: #000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.tv-details-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555555;
+}
+
+.tv-details-production {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.tv-details-company {
+    text-align: center;
+    max-width: 100px;
+}
+
+.tv-details-company img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+
+.tv-details-recommendations-section {
+    margin-top: 40px;
+}
+
+.tv-details-recommendations-section h2 {
+    font-family: "Source Sans 3", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.tv-details-recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.tv-details-rec-card {
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.2s ease;
+}
+
+.tv-details-rec-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tv-details-rec-poster {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.tv-details-rec-card h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333333;
+}
+
+.tv-details-rec-card p {
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+}

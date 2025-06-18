@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import { Card, Row, Col } from 'react-bootstrap';
@@ -18,21 +17,34 @@ const Recommendations = () => {
       .catch(err => console.error('Error fetching recommendations', err));
   }, [id]);
 
-  return (
+    // Helper function to format date safely
+    const getFormattedDate = (dateString) => {
+        if (!dateString) return 'N/A';
+        const date = new Date(dateString);
+        if (isNaN(date.getTime())) return 'N/A';
+
+        return date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: '2-digit',
+            year: 'numeric',
+        });
+    };
+
+    return (
     <div className="container my-4">
-      <h2 className="mb-4">Recommendations</h2>
+        <h2 className="mb-4 recommendations-title">Recommendations</h2>
       <Row>
         {recommended.slice(0, 6).map(movie => (
           <Col key={movie.id} xs={12} sm={6} md={4} lg={2} className="mb-4">
-            <Card className={`${"movieCard"} shadow-sm`}>
-              <div className={"posterWrapper"}>
+              <Card className="recommendations-movie-card shadow-sm">
+                  <div className="recommendations-poster-wrapper">
                 <Card.Img
                   variant="top"
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt={movie.title}
-                  className={"cardImg"}
+                  className="recommendations-card-img"
                 />
-                <div className={"ratingCircle"}>
+                  <div className="recommendations-rating-circle">
                   <CircularProgressbar
                     value={movie.vote_average * 10}
                     text={`${Math.round(movie.vote_average * 10)}%`}
@@ -47,14 +59,10 @@ const Recommendations = () => {
               </div>
               <Card.Body>
                 <Card.Title className="fs-6">
-                  {movie.title.split(' ').slice(0, 3).join(' ')}
+                    {movie.title ? movie.title.split(' ').slice(0, 3).join(' ') : 'Unknown Title'}
                 </Card.Title>
                 <Card.Text className="text-muted">
-                  {new Date(movie.release_date).toLocaleDateString('en-US', {
-                    month: 'short',
-                    day: '2-digit',
-                    year: 'numeric',
-                  })}
+                    {getFormattedDate(movie.release_date)}
                 </Card.Text>
               </Card.Body>
             </Card>

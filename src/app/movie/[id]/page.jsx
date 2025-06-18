@@ -20,45 +20,54 @@ const MovieDetails = () => {
       .catch(error => console.error("Error fetching movie details:", error));
   }, [id]);
 
-  return (
-    <div className={"container"}>
+    // Helper function to format date safely
+    const getFormattedDate = (dateString) => {
+        if (!dateString) return 'N/A';
+        const date = new Date(dateString);
+        return isNaN(date.getTime()) ? 'N/A' : date.toLocaleDateString();
+    };
+
+    return (
+      <div className="movie-details-container">
       {movie && (
-        <div className={"wrapper"}>
-          <div className={"left"}>
+          <div className="movie-details-wrapper">
+              <div className="movie-details-left">
             <img
-              className={"poster"}
+                className="movie-details-poster"
               src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
               alt={movie.title}
             />
           </div>
-          <div className={"right"}>
-            <h1 className={"title"}>{movie.title}</h1>
-            <p className={"date"}>{new Date(movie.release_date).toLocaleDateString()}</p>
+            <div className="movie-details-right">
+                <h1 className="movie-details-title">{movie.title}</h1>
+                <p className="movie-details-date">{getFormattedDate(movie.release_date)}</p>
 
-            <div className={"rating"}>
+              <div className="movie-details-rating">
               <Rating value={movie.vote_average / 2} readOnly cancel={false} stars={5} />
-              <span className={"vote"}>{movie.vote_average.toFixed(1)}</span>
+                <span className="movie-details-vote">{movie.vote_average.toFixed(1)}</span>
             </div>
 
-            <p className={"overview"}>{movie.overview}</p>
+              <p className="movie-details-overview">{movie.overview}</p>
 
-            <div className={"genres"}>
-              {movie.genres.map((genre) => (
-                <span key={genre.id} className={"genreItem"}>
+              <div className="movie-details-genres">
+                  {movie.genres && movie.genres.map((genre) => (
+                      <span key={genre.id} className="movie-details-genre-item">
                   {genre.name}
                 </span>
               ))}
             </div>
 
-            <div className={"details"}>
-              <p><strong>Duration:</strong> {movie.runtime} min</p>
-              <p><strong>Language:</strong> {movie.original_language.toUpperCase()}</p>
+              <div className="movie-details-info">
+                  <p><strong>Duration:</strong> {movie.runtime ? `${movie.runtime} min` : 'N/A'}</p>
+                  <p>
+                      <strong>Language:</strong> {movie.original_language ? movie.original_language.toUpperCase() : 'N/A'}
+                  </p>
             </div>
 
-            <div className={"production"}>
-              {movie.production_companies.map(company => (
+              <div className="movie-details-production">
+                  {movie.production_companies && movie.production_companies.map(company => (
                 company.logo_path && (
-                  <div key={company.id} className={"company"}>
+                    <div key={company.id} className="movie-details-company">
                     <img
                       src={`https://image.tmdb.org/t/p/w200/${company.logo_path}`}
                       alt={company.name}

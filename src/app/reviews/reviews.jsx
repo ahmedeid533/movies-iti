@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import axiosInstance from '../apis/config'; // Adjust the path to where axiosInstance is located
@@ -16,15 +15,15 @@ const Reviews = () => {
   }, [id]);
 
   return (
-    <div className={"container"}>
-      <h2 className={"title"}>Reviews</h2>
+      <div className="reviews-container">
+          <h2 className="reviews-title">Reviews</h2>
       {reviews.slice(0, 3).map((review) => (
-        <div key={review.id} className={"card"}>
-          <div className={"header"}>
-            <div className={"avatar"}>{review.author.charAt(0).toUpperCase()}</div>
+          <div key={review.id} className="reviews-card">
+              <div className="reviews-header">
+                  <div className="reviews-avatar">{review.author.charAt(0).toUpperCase()}</div>
             <div>
-              <p className={"author"}><strong>A review by {review.author}</strong></p>
-              <p className={"date"}>
+                <p className="reviews-author"><strong>A review by {review.author}</strong></p>
+                <p className="reviews-date">
                 Written on {new Date(review.created_at).toLocaleDateString('en-US', {
                   month: 'long',
                   day: '2-digit',
@@ -33,7 +32,7 @@ const Reviews = () => {
               </p>
             </div>
           </div>
-          <div className={"content"}>
+            <div className="reviews-content">
             <p>{review.content.split(" ").slice(0, 40).join(" ")}...</p>
           </div>
         </div>

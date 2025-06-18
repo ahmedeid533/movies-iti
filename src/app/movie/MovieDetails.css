@@ -1,76 +1,80 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-body{
-  font-family: "Source Sans 3", sans-serif;
 
+.movie-card-float .card-title {
+  /* shimmer animation ONLY applied to .card-title inside .movie-card-float */
 }
-.container {
+
+.movie-details-container {
   padding: 40px 20px;
   max-width: 1200px;
   margin: auto;
+  background-color: #ffffff;
+  color: #333333;
 }
 
-.wrapper {
+.movie-details-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   margin-bottom: 60px;
 }
 
-.left {
+.movie-details-left {
   flex: 1 1 300px;
   max-width: 400px;
 }
 
-.poster {
+.movie-details-poster {
   width: 100%;
   border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.right {
+.movie-details-right {
   flex: 1 1 500px;
 }
 
-.title {
+.movie-details-title {
   font-family: "Source Sans 3", sans-serif;
-font-size:35.2px ;
-font-weight: 700;
+  font-size: 35.2px;
+  font-weight: 700;
   margin-bottom: 10px;
+  color: #333333;
 }
 
-.date {
-  color: #888;
+.movie-details-date {
+  color: #666666;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-.rating {
+.movie-details-rating {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-.vote {
+.movie-details-vote {
   font-size: 18px;
   font-weight: bold;
-  color: #f5c518;
+  color: #ffe353;
 }
 
-.overview {
+.movie-details-overview {
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 20px;
+  color: #444444;
 }
 
-.genres {
+.movie-details-genres {
   margin-bottom: 20px;
 }
 
-.genreItem {
+.movie-details-genre-item {
   display: inline-block;
-  background-color: #FFE353;
+  background-color: #ffe353;
   color: #000;
   padding: 8px 16px;
   border-radius: 20px;
@@ -79,39 +83,30 @@ font-weight: 700;
   font-size: 14px;
 }
 
-.details {
+.movie-details-info {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
   font-size: 16px;
   margin-bottom: 30px;
+  color: #555555;
 }
 
-.production {
+.movie-details-production {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }
 
-.company {
+.movie-details-company {
   text-align: center;
   max-width: 100px;
 }
 
-.company img {
+.movie-details-company img {
   max-width: 100%;
   height: auto;
   margin-bottom: 5px;
-
+  border-radius: 8px;
 }
-:global(.p-rating .p-icon) {
-  /* font-size: 3rem;   */
-  /* color: #f5c518;  */
-  scale: 1.2;
-  gap: 2px;
-  /* padding: 3px ; */
-  margin: 3px;
-  
-}
-
