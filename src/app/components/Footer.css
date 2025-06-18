@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.app-footer {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2c2c2c 100%);
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    margin-top: auto;
+}
+
+/* Main Footer Sections */
+.footer-main {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-section {
+    height: 100%;
+}
+
+/* Footer Brand/Logo */
+.footer-brand {
+    color: #ffe353;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-brand i {
+    color: #ffe353;
+}
+
+.footer-about {
+    color: #cccccc;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* App Rating */
+.app-rating {
+    margin-top: 1rem;
+}
+
+.rating-stars {
+    margin-bottom: 0.5rem;
+}
+
+.rating-stars i {
+    color: #ffe353;
+    margin-right: 2px;
+    font-size: 0.9rem;
+}
+
+.rating-text {
+    color: #999999;
+    font-size: 0.8rem;
+}
+
+/* Footer Titles */
+.footer-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #ffe353;
+    border-radius: 1px;
+}
+
+/* Footer Links */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.footer-links a:hover {
+    color: #ffe353;
+    padding-left: 5px;
+}
+
+.footer-links a::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1px;
+    background: #ffe353;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::before {
+    width: 10px;
+}
+
+/* Newsletter Section */
+.newsletter-desc {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.newsletter-form {
+    margin-bottom: 1.5rem;
+}
+
+.newsletter-input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 8px 0 0 8px;
+    padding: 12px 15px;
+}
+
+.newsletter-input::placeholder {
+    color: #999999;
+}
+
+.newsletter-input:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffe353;
+    color: #ffffff;
+    box-shadow: none;
+}
+
+.newsletter-btn {
+    background: linear-gradient(135deg, #ffe353 0%, #ffc107 100%);
+    border: none;
+    color: #1a1a1a;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+}
+
+.newsletter-btn:hover {
+    background: linear-gradient(135deg, #ffc107 0%, #ffb300 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(255, 227, 83, 0.3);
+}
+
+/* Social Media */
+.social-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #cccccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+.social-link.facebook:hover {
+    background: #1877f2;
+}
+
+.social-link.twitter:hover {
+    background: #1da1f2;
+}
+
+.social-link.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-link.youtube:hover {
+    background: #ff0000;
+}
+
+.social-link.linkedin:hover {
+    background: #0077b5;
+}
+
+.social-link.discord:hover {
+    background: #5865f2;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-text {
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.made-with {
+    color: #888888;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.made-with i {
+    animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer Badges */
+.footer-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.app-store-badges {
+    display: flex;
+    gap: 10px;
+}
+
+.store-badge {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.store-badge:hover {
+    transform: scale(1.05);
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-text {
+    color: #888888;
+    font-size: 0.8rem;
+}
+
+.payment-icons {
+    display: flex;
+    gap: 8px;
+}
+
+.payment-icons i {
+    font-size: 1.5rem;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.payment-icons i:hover {
+    color: #ffe353;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: absolute;
+    top: -25px;
+    right: 30px;
+}
+
+.back-to-top-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ffe353 0%, #ffc107 100%);
+    border: none;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 227, 83, 0.3);
+}
+
+.back-to-top-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 227, 83, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-title::after {
+        width: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-badges {
+        align-items: center;
+        text-align: center;
+    }
+
+    .app-store-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .payment-methods {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+
+    .back-to-top {
+        right: 20px;
+    }
+
+    .footer-about {
+        text-align: center;
+    }
+
+    .footer-brand {
+        justify-content: center;
+    }
+
+    .app-rating {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .newsletter-form .input-group {
+        flex-direction: column;
+    }
+
+    .newsletter-input {
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter-btn {
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+
+    .store-badge {
+        height: 35px;
+    }
+
+    .payment-icons i {
+        font-size: 1.3rem;
+    }
+}
+
+/* RTL Support */
+.rtl .footer-title::after {
+    left: auto;
+    right: 0;
+}
+
+.rtl .footer-links a:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.rtl .footer-links a::before {
+    left: auto;
+    right: -15px;
+}
+
+.rtl .footer-badges {
+    align-items: flex-start;
+}
+
+.rtl .back-to-top {
+    right: auto;
+    left: 30px;
+}
+
+@media (max-width: 768px) {
+    .rtl .back-to-top {
+        left: 20px;
+    }
+}
