@@ -2,6 +2,8 @@
 
 body {
   font-family: "Source Sans 3", sans-serif;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 .movieCard {
@@ -10,16 +12,17 @@ body {
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .movieCard:hover {
   transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-
-
 .cardImg {
-  height: 330px; /* increased height */
+    height: 330px;
   object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -35,14 +38,17 @@ body {
   left: 10px;
   width: 50px;
   height: 50px;
-  background-color: #081c22;
+    background-color: #333333;
   border-radius: 50%;
   padding: 3px;
   z-index: 1;
 }
+
 .head {
-  font-size: 1.5rem;
+    font-size: 1.2rem;
   font-weight: bold;
+    color: #333333;
+    margin-bottom: 0.5rem;
 }
 
 /* Heart icon */
@@ -55,24 +61,30 @@ body {
   cursor: pointer;
   z-index: 2;
   transition: color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 8px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .heartIcon:hover {
-  color: #FFC107;
+    color: #ffe353;
+    background-color: rgba(255, 227, 83, 0.1);
 }
 
 .liked {
-  color: #FFC107;
+    color: #ffe353;
+    background-color: rgba(255, 227, 83, 0.2);
 }
 
 h2 {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 600;
   font-size: 50px;
-  margin-top: 30px; /* added top margin */
+    margin-top: 30px;
+    color: #333333;
 }
-
-
-
-
-

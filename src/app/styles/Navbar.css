@@ -33,14 +33,14 @@
 }
 
 .languageSelect:hover {
-  background-color: #ffffff;
+    background-color: #ffc107;
 }
 
 .languageSelect:focus {
-  background-color: #ffffff;
+    background-color: #ffc107;
   color: #212529;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(33, 37, 41, 0.2);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.25);
 }
 
 .languageSelect option {

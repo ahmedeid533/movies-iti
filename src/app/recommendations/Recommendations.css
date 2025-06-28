@@ -1,40 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
-body{
-  font-family: "Source Sans 3", sans-serif;
 
-}
-.movieCard {
+.recommendations-movie-card {
     border: none;
     border-radius: 15px;
     overflow: hidden;
-    /* background-color: #fff; */
-  }
-  h2{
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-title {
     font-family: "Source Sans 3", sans-serif;
     font-weight: 600;
     font-size: 24px;
-  }
-  .cardImg {
+    color: #333333;
+}
+
+.recommendations-card-img {
     height: 300px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-  }
-  
-  .posterWrapper {
+}
+
+.recommendations-poster-wrapper {
     position: relative;
-  }
-  
-  .ratingCircle {
+}
+
+.recommendations-rating-circle {
     position: absolute;
     bottom: -20px;
     left: 10px;
     width: 50px;
     height: 50px;
-    background-color: #081c22;
+    background-color: #333333;
     border-radius: 50%;
     padding: 3px;
 }
- 
-  
- 

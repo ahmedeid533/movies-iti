@@ -33,7 +33,7 @@ export default function Navbar() {
 				<div className="container">
 					<Link
 						className="navbar-brand fw-bold ms-4"
-						href={"/MoviesList"}
+						href={"/"}
 					>
 						Movie App
 					</Link>
@@ -52,6 +52,14 @@ export default function Navbar() {
 						<ul className="navbar-nav ms-auto me-4">
 							<li className="nav-item mx-1">
 								<LoginButton />
+							</li>
+							<li className="nav-item mx-1">
+								<Link
+									className="nav-link fw-semibold "
+									href="/"
+								>
+									Home
+								</Link>
 							</li>
 							<li className="nav-item mx-1">
 								<Link

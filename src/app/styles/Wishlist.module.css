@@ -1,24 +1,28 @@
 .date {
   font-size: 0.75rem;
-  color: rgb(147, 146, 146);
+    color: #666666;
 }
 
 .button {
   background-color: #ffe353;
+    color: #333333;
   text-decoration: none;
   border-radius: 10px;
   padding: 10px 20px;
   border: none;
   transition: 0.3s;
+    font-weight: 500;
 }
 
 .button:hover {
-  background-color: #ffde36;
+    background-color: #ffc107;
+    color: #333333;
+    text-decoration: none;
 }
 
 .icon {
   font-size: 9rem;
-  color: #d1d1d1;
+    color: #cccccc;
 }
 
 .rating {
@@ -29,13 +33,20 @@
 .scrollable {
   overflow-y: scroll;
   height: 120px;
+    color: #555555;
 }
 
 .card {
   transition: 0.3s;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 1px 1px 8px 1px #ffe2538b !important;
+    box-shadow: 0 4px 12px rgba(255, 227, 83, 0.3) !important;
+}
+
+.image {
+    border-radius: 10px;
 }
